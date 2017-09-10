@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="css/Signup.css">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<script type="text/x-javascript">
+function checkForm(form) { 
+var flag = true;
+if(form.username.value == "") 
+{ alert("Error: Username cannot be blank!"); 
+form.username.focus(); flag = false; return false; }
+if(!re.test(form.username.value)) 
+{ alert("Error: Username must contain only letters, numbers and underscores!");
+form.username.focus(); flag = false; return false; }
+if(flag == true) return true;
+else return false;
+}
+</script>
+
+<body>
+  <div class="container">
+    <section class="register">
+      <h1>Signup for BookShare.com</h1>
+      <form method="post" action="Signup.jsp">
+      <div class="reg_section personal_info">
+      <h3>Your Personal Information</h3>
+      <input type="text" name="username" value="" placeholder="Username">
+      <input type="text" name="email" value="" placeholder="E-mail Address">
+      <input style="" type="text" name="mobile" value="" placeholder="Mobile no.">
+      </div>
+      <div class="reg_section password"> 
+      <h3>Your Password</h3>
+      <input type="password" name="password" value="" placeholder="Your Password" >
+      <input type="password" name="confirm" value="" placeholder="Confirm Password" >
+      </div>
+      <div class="reg_section password">
+      <h3>Your Address</h3>
+      <!--<input name="Address"> -->
+      <select name="Address">
+        <option value="">Indore</option>
+        <option value="">Bhopal</option>
+        <option value="">Khargon</option>
+        <option value="">Khandwa</option>
+      </select>
+      <textarea name="textarea" id="">Your Full Address</textarea>
+      </div>
+      <p class="terms">
+        <label>
+          <input type="checkbox" name="remember_me" id="remember_me">
+           I accept Terms & Condition
+        </label>
+      </p>
+      <p class="submit"><input type="submit" name="commit" value="Sign Up"></p>
+      </form>
+    </section>
+  </div>
+
+  
+
+</body>
+</html>
